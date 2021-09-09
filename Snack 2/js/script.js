@@ -127,31 +127,28 @@ squads = squads.reverse();
 
 for (let i = 0; i < squads.length; i++) {
     const {nome, punti, falli} = squads[i];
-    document.getElementById('squads').innerHTML += `<div id="rankingSquads">${i+1}.    ${nome}     Punti: ${punti}    Falli subiti: ${falli} <br> <br></div>`
-    const rankingSquads = document.getElementById('rankingSquads');
+    document.getElementById('squads').innerHTML += `<div id="squad${i}">${i+1}.    ${nome}     Punti: ${punti}    Falli subiti: ${falli} <br> <br></div>`;
 
     switch(i) {
-        case 1:
-            rankingSquads.classList.add(`championsOfItaly`);
+        case 0:
+            document.getElementById(`squad${i}`).classList.add(`championsOfItaly`);
             break;
+        case 1:
         case 2:
         case 3:
+            document.getElementById(`squad${i}`).classList.add(`championsLeague`);
+            break;
         case 4:
-            rankingSquads.classList.add(`championsLeague`);
-            break;
         case 5:
+            document.getElementById(`squad${i}`).classList.add(`europaLeague`);
+            break;
         case 6:
-            rankingSquads.classList.add(`europaLeague`);
+            document.getElementById(`squad${i}`).classList.add(`conferenceLeague`);
             break;
-        case 7:
-            rankingSquads.classList.add(`conferenceLeague`);
-            break;
+        case 17:
         case 18:
         case 19:
-        case 20:
-            rankingSquads.classList.add(`relegation`);
+            document.getElementById(`squad${i}`).classList.add(`relegation`);
             break;
     }
 }
-
-console.log(squads);
