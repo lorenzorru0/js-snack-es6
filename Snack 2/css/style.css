@@ -1,6 +1,6 @@
 /* Color */
 .championsOfItaly {
-    color: darkgreen;
+    color: rgb(0, 77, 0);
 }
 .championsLeague {
     color: green;
@@ -9,7 +9,7 @@
     color: red;
 }
 .conferenceLeague {
-    color: lightblue;
+    color: rgb(72, 184, 221);
 }
 .relegation {
     color: darkred;
