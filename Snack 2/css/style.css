@@ -1,0 +1,16 @@
+/* Color */
+.championsOfItaly {
+    color: darkgreen;
+}
+.championsLeague {
+    color: green;
+}
+.europaLeague {
+    color: red;
+}
+.conferenceLeague {
+    color: lightblue;
+}
+.relegation {
+    color: darkred;
+}

@@ -129,33 +129,29 @@ for (let i = 0; i < squads.length; i++) {
     const {nome, punti, falli} = squads[i];
     document.getElementById('squads').innerHTML += `<div id="rankingSquads">${i+1}.    ${nome}     Punti: ${punti}    Falli subiti: ${falli} <br> <br></div>`
     const rankingSquads = document.getElementById('rankingSquads');
-    if (i == 1) rankingSquads.style.color = "dark green";
-    if (i == 2 || i == 3 || i == 4) rankingSquads.style.color = "green";
 
-
-
-    // switch(i) {
-    //     case 1:
-    //         rankingSquads.style.color = "dark green";
-    //         break;
-    //     case 2:
-    //     case 3:
-    //     case 4:
-            
-    //         break;
-    //     case 5:
-    //     case 6:
-    //         rankingSquads.style.color = "red";
-    //         break;
-    //     case 7:
-    //         rankingSquads.style.color = "ligth blue";
-    //         break;
-    //     case 18:
-    //     case 19:
-    //     case 20:
-    //         rankingSquads.style.color = "dark red";
-    //         break;
-    // }
+    switch(i) {
+        case 1:
+            rankingSquads.classList.add(`championsOfItaly`);
+            break;
+        case 2:
+        case 3:
+        case 4:
+            rankingSquads.classList.add(`championsLeague`);
+            break;
+        case 5:
+        case 6:
+            rankingSquads.classList.add(`europaLeague`);
+            break;
+        case 7:
+            rankingSquads.classList.add(`conferenceLeague`);
+            break;
+        case 18:
+        case 19:
+        case 20:
+            rankingSquads.classList.add(`relegation`);
+            break;
+    }
 }
 
 console.log(squads);
