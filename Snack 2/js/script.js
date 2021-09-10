@@ -110,9 +110,18 @@ let squads = [
     }
 ];
 
+const arraySquadsFals = [];
+
 for(let i = 0; i < squads.length; i++) {
     squads[i].punti = randomNumber(23, 98);
     squads[i].falli = randomNumber(250, 500);
+
+    const {nome, falli} = squads[i];
+
+    arraySquadsFals.push({
+        nome,
+        falli
+    });
 }
 
 squads.sort((a, b) => {
@@ -120,6 +129,8 @@ squads.sort((a, b) => {
 });
 
 squads = squads.reverse();
+
+console.log(arraySquadsFals);
 
 // employees.forEach((e) => {
 //     console.log(`${e.firstName} ${e.lastName} ${e.age}`);
