@@ -9,8 +9,10 @@
 const arrayBetweenAandB = (array, min, max) => {
     let arrayCut = [];
 
-    arrayCut = array.filter( (arr) => {
-        return (arr >= min || arr <= max);
+    array.forEach((element, index) => {
+        if(index >= (min - 1) && index <= (max - 1)) {
+            arrayCut.push(element);
+        }
     });
 
     return arrayCut;
